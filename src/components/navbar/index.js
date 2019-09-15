@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
+import $ from 'jquery'
 
 class NavBar extends React.Component {
 
@@ -30,8 +31,8 @@ class NavBar extends React.Component {
                         </div>
 
                         <ul className="navbar-nav ml-auto">
-                            <li className={location.pathname === "/" ? "nav-item active" : "nav-item"}><Link to="/" className="nav-link">Home</Link></li>
-                            <li className={location.pathname === "/shop" ? "nav-item active" : "nav-item"}><Link to="/shop" className="nav-link">Shop</Link></li>
+                            <li className={location.pathname === "/" ? "nav-item active" : "nav-item"}><Link to="/" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Home</Link></li>
+                            <li className={location.pathname === "/shop" ? "nav-item active" : "nav-item"}><Link to="/shop" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Shop</Link></li>
                             {/*<li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="dropdown04"
                                    data-toggle="dropdown" aria-haspopup="true"
@@ -46,16 +47,13 @@ class NavBar extends React.Component {
                                 </div>
                             </li>*/}
                             <li className={location.pathname === "/about" ? "nav-item active" : "nav-item"}>
-                                <Link to="/about"
-                                                           className="nav-link">About</Link></li>
+                                <Link to="/about" className="nav-link" onClick={() => $(".navbar-toggler").click()}>About</Link></li>
                             <li className={location.pathname === "/blog" ? "nav-item active" : "nav-item"}>
-                                <Link to="/blog"
-                                                           className="nav-link">Blog</Link></li>
+                                <Link to="/blog" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Blog</Link></li>
                             <li className={location.pathname === "/contact" ? "nav-item active" : "nav-item"}>
-                                <Link to="/contact"
-                                                           className="nav-link">Contact</Link></li>
+                                <Link to="/contact" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Contact</Link></li>
                             <li className="nav-item cta cta-colored">
-                                <Link to="/#cart" className="nav-link">
+                                <Link to="/#cart" className="nav-link" onClick={() => $(".navbar-toggler").click()}>
                                     <span className="icon-shopping_cart"></span>Cart (0)</Link></li>
 
                         </ul>

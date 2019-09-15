@@ -54,20 +54,43 @@ module.exports = {
       },
     `gatsby-plugin-layout`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-twitter`,
+      // this (optional) plugin enables Progressive Web App + Offline functionality
+      {
+          resolve: `gatsby-plugin-manifest`,
+          options: {
+              name: 'vegefoods-colorlib-gatsby-shopify',
+              short_name: 'vegefoods',
+              description: 'A simple starter to get up and developing quickly with Gatsby + Shopify and a stunning theme',
+              homepage_url: 'https://vegefoods-colorlib-gatsby-shopify.netlify.com',
+              start_url: '/',
+              background_color: '#fff',
+              theme_color: '#673ab7',
+              display: 'standalone',
+              crossOrigin: `use-credentials`,
+              icons: [
+                  {
+                      src: '/img/android-chrome-192x192.png',
+                      sizes: '192x192',
+                      type: 'image/png',
+                  },
+                  {
+                      src: '/img/android-chrome-512x512.png',
+                      sizes: '512x512',
+                      type: 'image/png',
+                  },
+              ],
+          },
       },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+      // To learn more, visit: https://gatsby.dev/offline
+      {
+          resolve: `gatsby-plugin-offline`,
+          options: {
+              cacheId: `vegefoods-theme-offline`
+          }
+      },
+      `gatsby-plugin-netlify-cache`
   ],
 }
