@@ -1,3 +1,9 @@
+[build]
+  publish = "public"
+  command = "gatsby build"
+[build.environment]
+  YARN_VERSION = "1.17.3"
+  YARN_FLAGS = "--no-ignore-optional"
 [template.environment]
   GATSBY_SHOP_NAME = "Your Shopify Shop name"
   GATSBY_SHOPIFY_ACCESS_TOKEN = "Your Shopify API access token"
