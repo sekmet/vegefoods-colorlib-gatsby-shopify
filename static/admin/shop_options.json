@@ -1,0 +1,18 @@
+{
+  "basePath": "/shop",
+  "productPath": "/product",
+  "tagPath": false,
+  "shopTagline": "Shopify Store",
+  "shopBtnlabel": "Learn more",
+  "shopCurrency": "USD",
+  "shopMetaTitleTpl": "A Lightning Fast Shopify Store",
+  "shopMetaDescriptionTpl": "Specialty store for every thing!",
+  "tagMetaTitleTpl": "Best %SHOPIFYPRODUCTTAG% products you find at %STORENAME%",
+  "tagMetaDescriptionTpl": "%STORENAME% store specialty for %SHOPIFYPRODUCTTAG%.",
+  "itemMetaTitleTpl": "Buy %SHOPIFYPRODUCTNAME% - %STORENAME%",
+  "itemMetaDescriptionTpl": "Specialty store for %SHOPIFYPRODUCTTAG%. Who compares purchase in %STORENAME%. Pay a visit!",
+  "collectionTplPath": "./src/components/shop/bytag.js",
+  "productsTplPath": "./src/templates/shop/index.js",
+  "productTplPath": "./src/components/shop/product.js",
+  "verbose": true
+}
