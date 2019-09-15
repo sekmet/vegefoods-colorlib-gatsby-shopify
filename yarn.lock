@@ -6002,7 +6002,7 @@ gatsby-telemetry@^1.1.22:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-blogify@^0.6.3:
+gatsby-theme-blogify@^0.6.1:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/gatsby-theme-blogify/-/gatsby-theme-blogify-0.6.3.tgz#c43944755c5d502d64c21d7f847cc44d5ae06cb4"
   integrity sha512-+htIZ6vz9BnRPrSKnT20vdCZS/l8iDSV6vsn0rIYQfFdBC+9nOIcK08MnkD7pKhzYOnN8XjxdJf5RTs8m+Nqmw==
@@ -8157,11 +8157,6 @@ latest-version@^3.0.0:
   integrity sha1-ogU4P+oyKzO1rjsYq+4NwvNW7hU=
   dependencies:
     package-json "^4.0.0"
-
-lazysizes@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.1.1.tgz#7ca0266519d531ce740d6782e42faf700883646c"
-  integrity sha512-UCbdRSsozjlS6r56dPMFXX+AW2t8G0duRKxQDwvEpNTrWOHQo56YlTx5ssT7epU87PoruF1q9tvW3kSbQjorMw==
 
 lcid@^1.0.0:
   version "1.0.0"
