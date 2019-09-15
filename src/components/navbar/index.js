@@ -2,6 +2,37 @@ import React from 'react'
 import {Link} from 'gatsby'
 import $ from 'jquery'
 
+const toggleMenuMobile = () => {
+
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i)
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i)
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i)
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i)
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i)
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows())
+        }
+    }
+
+    if (isMobile.any())
+        $(".navbar-toggler").click()
+    else
+        return false
+
+}
+
+
 class NavBar extends React.Component {
 
     render() {
@@ -31,8 +62,8 @@ class NavBar extends React.Component {
                         </div>
 
                         <ul className="navbar-nav ml-auto">
-                            <li className={location.pathname === "/" ? "nav-item active" : "nav-item"}><Link to="/" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Home</Link></li>
-                            <li className={location.pathname === "/shop" ? "nav-item active" : "nav-item"}><Link to="/shop" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Shop</Link></li>
+                            <li className={location.pathname === "/" ? "nav-item active" : "nav-item"}><Link to="/" className="nav-link" onClick={() => toggleMenuMobile()}>Home</Link></li>
+                            <li className={location.pathname === "/shop" ? "nav-item active" : "nav-item"}><Link to="/shop" className="nav-link" onClick={() => toggleMenuMobile()}>Shop</Link></li>
                             {/*<li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="dropdown04"
                                    data-toggle="dropdown" aria-haspopup="true"
@@ -47,13 +78,13 @@ class NavBar extends React.Component {
                                 </div>
                             </li>*/}
                             <li className={location.pathname === "/about" ? "nav-item active" : "nav-item"}>
-                                <Link to="/about" className="nav-link" onClick={() => $(".navbar-toggler").click()}>About</Link></li>
+                                <Link to="/about" className="nav-link" onClick={() => toggleMenuMobile()}>About</Link></li>
                             <li className={location.pathname === "/blog" ? "nav-item active" : "nav-item"}>
-                                <Link to="/blog" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Blog</Link></li>
+                                <Link to="/blog" className="nav-link" onClick={() => toggleMenuMobile()}>Blog</Link></li>
                             <li className={location.pathname === "/contact" ? "nav-item active" : "nav-item"}>
-                                <Link to="/contact" className="nav-link" onClick={() => $(".navbar-toggler").click()}>Contact</Link></li>
+                                <Link to="/contact" className="nav-link" onClick={() => toggleMenuMobile()}>Contact</Link></li>
                             <li className="nav-item cta cta-colored">
-                                <Link to="/#cart" className="nav-link" onClick={() => $(".navbar-toggler").click()}>
+                                <Link to="/#cart" className="nav-link" onClick={() => toggleMenuMobile()}>
                                     <span className="icon-shopping_cart"></span>Cart (0)</Link></li>
 
                         </ul>
