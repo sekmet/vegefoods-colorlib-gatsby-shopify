@@ -1,5 +1,15 @@
-//import {Link} from 'gatsby'
 import React from 'react'
+import SubscribeInputbox from "gatsby-theme-mailchimped/src/components/subscribeinput";
+const mailchimpOptions = require("../../../static/admin/mailchimp_options")
+
+const pageContext = {
+    mailchimplistendpoint: mailchimpOptions.mailchimpListEndpoint,
+    subscribeformclassname: mailchimpOptions.subscribeFormClassname,
+    subscribeinputclassname: mailchimpOptions.subscribeInputClassname,
+    subscribeinputplaceholder: mailchimpOptions.subscribeInputPlaceholder,
+    subscribesubmitclassname: mailchimpOptions.subscribeSubmitClassname,
+    subscribesubmitplaceholder: mailchimpOptions.subscribeSubmitPlaceholder,
+}
 
 const Newsletter = () => (
 
@@ -7,17 +17,11 @@ const Newsletter = () => (
         <div className="container py-4">
             <div className="row d-flex justify-content-center py-5">
                 <div className="col-md-6">
-                    <h2 style={{fontSize: "22px"}} className="mb-0">Subcribe to our
-                        Newsletter</h2>
+                    <h2 style={{fontSize: "22px"}} className="mb-0">Subcribe to our Newsletter</h2>
                     <span>Get e-mail updates about our latest shops and special offers</span>
                 </div>
                 <div className="col-md-6 d-flex align-items-center">
-                    <form action="#" className="subscribe-form">
-                        <div className="form-group d-flex">
-                            <input type="text" className="form-control" placeholder="Enter email address"/>
-                            <input type="submit" placeholder="Subscribe" className="submit px-3"/>
-                        </div>
-                    </form>
+                    <SubscribeInputbox pageContext={pageContext}/>
                 </div>
             </div>
         </div>

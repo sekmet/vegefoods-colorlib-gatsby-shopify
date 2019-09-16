@@ -1,0 +1,8 @@
+{
+  "mailchimpListEndpoint": false,
+  "subscribeFormClassname": "subscribe-form",
+  "subscribeInputClassname": "form-control",
+  "subscribeInputPlaceholder": "Your email address",
+  "subscribeSubmitClassname": "submit px-3",
+  "subscribeSubmitPlaceholder": "Subscribe"
+}

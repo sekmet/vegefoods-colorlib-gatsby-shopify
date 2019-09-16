@@ -19,13 +19,13 @@ class FeaturedProducts extends React.Component {
 
     render() {
 
-        const basepath = shopOptions.basePath,
-            tagpath = shopOptions.tagPath,
+        const //basepath = shopOptions.basePath,
+            //tagpath = shopOptions.tagPath,
             productpath = shopOptions.productPath,
-            shoptagline = shopOptions.shopTagline,
-            shopcurrency = shopOptions.shopCurrency,
-            metatitletpl = shopOptions.shopMetaTitleTpl,
-            metadescriptiontpl = shopOptions.shopMetaDescriptionTpl
+            //shoptagline = shopOptions.shopTagline,
+            shopcurrency = shopOptions.shopCurrency
+            //metatitletpl = shopOptions.shopMetaTitleTpl,
+            //metadescriptiontpl = shopOptions.shopMetaDescriptionTpl
 
         var shop_coin = getSymbolFromCurrency(shopcurrency)
 

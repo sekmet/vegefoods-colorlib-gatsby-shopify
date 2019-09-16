@@ -4,6 +4,7 @@ require('dotenv').config({
 
 const siteMetadata = require("./static/admin/site_metadata")
 const blogOptions = require("./static/admin/blog_options")
+const mailchimpOptions = require("./static/admin/mailchimp_options")
 blogOptions.siteMetadata = siteMetadata
 const shopOptions = require("./static/admin/shop_options")
 const shopifyOptions = require('./gatsby-shopifystore')
@@ -51,6 +52,10 @@ module.exports = {
       {
           resolve: "gatsby-theme-shopifystore",
           options: shopOptions
+      },
+      {
+          resolve: "gatsby-theme-mailchimped",
+          options: mailchimpOptions,
       },
     `gatsby-plugin-layout`,
     `gatsby-plugin-sass`,
