@@ -69,7 +69,7 @@ class ProductPage extends React.Component {
          description={metadescriptiontpl ? metaReplace(metadescriptiontpl,findMeta,replaceMeta) : `${product.description.substring(0,109)}...`}
     />
     <StructuredData type="product" data={sData} />
-    <div className="hero-wrap hero-bread" style={{background: `linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url('${product.images[0].localFile.childImageSharp.fluid.src}')`}}>
+    <div className="hero-wrap hero-bread" style={{background: `linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url('${product.images[0].localFile.childImageSharp.fluid ? product.images[0].localFile.childImageSharp.fluid.src : '/images/no-image.svg'}')`}}>
         <BlockWaypoint ref={el => this.el = this.el} innerchild={'.hero-bread .ftco-animate'}>
         <div className="container">
             <div className="row no-gutters slider-text align-items-center justify-content-center">
