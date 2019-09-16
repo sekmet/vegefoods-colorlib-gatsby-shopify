@@ -47,10 +47,10 @@ class partnersWidget extends React.Component {
                                                 <a href="/#" className="partner"><Image fluid={data.partnerOne.childImageSharp.fluid} alt={`Partners`}/></a>
                                             </div>
                                             <div className="col-sm ftco-animate">
-                                                <a href="/#" className="partner">><Image fluid={data.partnerTwo.childImageSharp.fluid} alt={`Partners`}/></a>
+                                                <a href="/#" className="partner"><Image fluid={data.partnerTwo.childImageSharp.fluid} alt={`Partners`}/></a>
                                             </div>
                                             <div className="col-sm ftco-animate">
-                                                <a href="/#" className="partner">><Image fluid={data.partnerThree.childImageSharp.fluid} alt={`Partners`}/></a>
+                                                <a href="/#" className="partner"><Image fluid={data.partnerThree.childImageSharp.fluid} alt={`Partners`}/></a>
                                             </div>
                                             <div className="col-sm ftco-animate">
                                                 <a href="/#" className="partner"><Image fluid={data.partnerFour.childImageSharp.fluid} alt={`Partners`}/></a>

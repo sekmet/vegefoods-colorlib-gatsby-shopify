@@ -7,6 +7,9 @@ import get from 'lodash/get'
 
 import SEO, { StructuredData } from "../../components/seo"
 import {BlockWaypoint} from "../../components/common/legacy/waypoint"
+import BlogCategories from "../common/blog/categories";
+import RecentBlog from "../common/blog/recentblog";
+import TagCloud from "../common/blog/tagcloud";
 
 class Article extends React.Component {
 
@@ -40,7 +43,7 @@ class Article extends React.Component {
             headline: title,
             description: description,
             date: fulldate,
-            images: [fluid ? fluid.src : '/images/pic01.jpg'],
+            images: [fluid ? fluid.src : '/images/no-image.svg'],
             author: metadata ? metadata.author : 'Author name',
             publisher: metadata ? metadata.title : 'Publisher name',
             publisherlogo: metadata ? metadata.logo : 'https://www.google.com/logo.jpg',
@@ -109,82 +112,20 @@ class Article extends React.Component {
                                             </div>
                                         </form>
                                     </div>
-                                    <div className="sidebar-box ftco-animate">
-                                        <h3 className="heading">Categories</h3>
-                                        <ul className="categories">
-                                            <li><a href="/#">Vegetables <span>(12)</span></a></li>
-                                            <li><a href="/#">Fruits <span>(22)</span></a></li>
-                                            <li><a href="/#">Juice <span>(37)</span></a></li>
-                                            <li><a href="/#">Dries <span>(42)</span></a></li>
-                                        </ul>
-                                    </div>
 
-                                    <div className="sidebar-box ftco-animate">
-                                        <h3 className="heading">Recent Blog</h3>
-                                        <div className="block-21 mb-4 d-flex">
-                                            <div className="blog-img mr-4"
-                                               style={{backgroundImage: "url(/images/image_1.jpg)"}}></div>
-                                            <div className="text">
-                                                <h3 className="heading-1"><a href="/#">Even the all-powerful Pointing has no
-                                                    control about the blind texts</a></h3>
-                                                <div className="meta">
-                                                    <div><a href="/#"><span className="icon-calendar"></span> April 09, 2019</a>
-                                                    </div>
-                                                    <div><a href="/#"><span className="icon-person"></span> Admin</a></div>
-                                                    <div><a href="/#"><span className="icon-chat"></span> 19</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="block-21 mb-4 d-flex">
-                                            <div className="blog-img mr-4"
-                                               style={{backgroundImage: "url(/images/image_2.jpg)"}}></div>
-                                            <div className="text">
-                                                <h3 className="heading-1"><a href="/#">Even the all-powerful Pointing has no
-                                                    control about the blind texts</a></h3>
-                                                <div className="meta">
-                                                    <div><a href="/#"><span className="icon-calendar"></span> April 09, 2019</a>
-                                                    </div>
-                                                    <div><a href="/#"><span className="icon-person"></span> Admin</a></div>
-                                                    <div><a href="/#"><span className="icon-chat"></span> 19</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="block-21 mb-4 d-flex">
-                                            <div className="blog-img mr-4"
-                                               style={{backgroundImage: "url(/images/image_3.jpg)"}}></div>
-                                            <div className="text">
-                                                <h3 className="heading-1"><a href="/#">Even the all-powerful Pointing has no
-                                                    control about the blind texts</a></h3>
-                                                <div className="meta">
-                                                    <div><a href="/#"><span className="icon-calendar"></span> April 09, 2019</a>
-                                                    </div>
-                                                    <div><a href="/#"><span className="icon-person"></span> Admin</a></div>
-                                                    <div><a href="/#"><span className="icon-chat"></span> 19</a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <BlogCategories/>
 
-                                    <div className="sidebar-box ftco-animate">
-                                        <h3 className="heading">Tag Cloud</h3>
-                                        <div className="tagcloud">
-                                            <a href="/#" className="tag-cloud-link">fruits</a>
-                                            <a href="/#" className="tag-cloud-link">tomatoe</a>
-                                            <a href="/#" className="tag-cloud-link">mango</a>
-                                            <a href="/#" className="tag-cloud-link">apple</a>
-                                            <a href="/#" className="tag-cloud-link">carrots</a>
-                                            <a href="/#" className="tag-cloud-link">orange</a>
-                                            <a href="/#" className="tag-cloud-link">pepper</a>
-                                            <a href="/#" className="tag-cloud-link">eggplant</a>
-                                        </div>
-                                    </div>
+                                    <RecentBlog pageContext={pageContext}/>
 
-                                    <div className="sidebar-box ftco-animate">
+                                    <TagCloud/>
+
+                                    {/*<div className="sidebar-box ftco-animate">
                                         <h3 className="heading">Paragraph</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem
                                             necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa
                                             sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-                                    </div>
+                                    </div>*/}
+
                                 </div>
 
 

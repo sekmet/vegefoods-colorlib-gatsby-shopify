@@ -5,6 +5,9 @@ import { Link } from "gatsby"
 import Img from 'gatsby-image';
 import SEO from "../../components/seo"
 import {BlockWaypoint} from "../../components/common/legacy/waypoint"
+import BlogCategories from "../../components/common/blog/categories";
+import RecentBlog from "../../components/common/blog/recentblog";
+import TagCloud from "../../components/common/blog/tagcloud";
 
 class Articles extends React.Component {
 
@@ -24,7 +27,7 @@ class Articles extends React.Component {
                           id
                           frontmatter {
                             title
-                            date
+                            date(formatString: "MMM DD, Y")
                             templateKey
                             tagline
                             category
@@ -51,10 +54,6 @@ class Articles extends React.Component {
         render={data => {
 
             const nodes = data.allMarkdownRemark.edges
-            //const frontmatter = nodeitem.frontmatter
-            //{/*<FeaturedImage alt={nodeitem.node.frontmatter.featuredImage.alt} filename={nodeitem.node.frontmatter.featuredImage.src} /> */}
-            //console.log(typeof pageContext.articlepath, pageContext.articlepath, (pageContext.articlepath !== false && pageContext.articlepath !== "false"))
-
             return (
                 <>
                     <SEO title={metatitle} description={metadescription}/>
@@ -83,6 +82,8 @@ class Articles extends React.Component {
 
 
                             {nodes.map((nodeitem) => {
+                                var theLink = pageContext.articlepath !== false && pageContext.articlepath !== "false" ? `${pageContext.articlepath}${nodeitem.node.frontmatter.path}` : nodeitem.node.frontmatter.path
+
                                 return (
 
                                     <div className="col-md-12 d-flex ftco-animate" key={nodeitem.node.id}>
@@ -91,21 +92,21 @@ class Articles extends React.Component {
                                                style={{backgroundImage: "url('/images/image_1.jpg')"}}>
                                             </a>*/}
                                             <Link
-                                                to={pageContext.articlepath !== false && pageContext.articlepath !== "false" ? `${pageContext.articlepath}${nodeitem.node.frontmatter.path}` : nodeitem.node.frontmatter.path}
+                                                to={theLink}
                                                 className="block-20">
                                                 {nodeitem.node.frontmatter.featuredImage ?
                                                     <Img
                                                         fluid={nodeitem.node.frontmatter.featuredImage.src.childImageSharp.fluid}/>
-                                                    : <img src="/images/pic01.jpg" alt="Gatsby in Space"/>}
+                                                    : <img src="/images/no-image.svg" alt={nodeitem.node.frontmatter.title} style={{width: "275px", height: "250px"}}/>}
                                             </Link>
                                             <div className="text d-block pl-md-4">
                                                 <div className="meta mb-3">
-                                                    <div><a href="/#">July 20, 2019</a></div>
-                                                    <div><a href="/#">Admin</a></div>
+                                                    <div><a href="/#">{nodeitem.node.frontmatter.date}</a></div>
+                                                    <div><a href="/#">{nodeitem.node.frontmatter.category}</a></div>
                                                     <div><a href="/#" className="meta-chat"><span
-                                                        className="icon-chat"></span> 3</a></div>
+                                                        className="icon-chat"></span> 0</a></div>
                                                 </div>
-                                                <h3 className="heading"><a href="/#">{nodeitem.node.frontmatter.title}</a></h3>
+                                                <h3 className="heading"><Link to={theLink}>{nodeitem.node.frontmatter.title}</Link></h3>
                                                 <p>{nodeitem.node.frontmatter.description}</p>
                                                 <p>
                                                     <Link
@@ -134,82 +135,19 @@ class Articles extends React.Component {
                                                 </div>
                                             </form>
                                         </div>
-                                        <div className="sidebar-box ftco-animate">
-                                            <h3 className="heading">Categories</h3>
-                                            <ul className="categories">
-                                                <li><a href="/#">Vegetables <span>(12)</span></a></li>
-                                                <li><a href="/#">Fruits <span>(22)</span></a></li>
-                                                <li><a href="/#">Juice <span>(37)</span></a></li>
-                                                <li><a href="/#">Dries <span>(42)</span></a></li>
-                                            </ul>
-                                        </div>
 
-                                        <div className="sidebar-box ftco-animate">
-                                            <h3 className="heading">Recent Blog</h3>
-                                            <div className="block-21 mb-4 d-flex">
-                                                <a href="/#" className="blog-img mr-4"
-                                                   style={{backgroundImage: "url(/images/image_1.jpg)"}}></a>
-                                                <div className="text">
-                                                    <h3 className="heading-1"><a href="/#">Even the all-powerful Pointing has no
-                                                        control about the blind texts</a></h3>
-                                                    <div className="meta">
-                                                        <div><a href="/#"><span className="icon-calendar"></span> April 09, 2019</a>
-                                                        </div>
-                                                        <div><a href="/#"><span className="icon-person"></span> Admin</a></div>
-                                                        <div><a href="/#"><span className="icon-chat"></span> 19</a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="block-21 mb-4 d-flex">
-                                                <a href="/#" className="blog-img mr-4"
-                                                   style={{backgroundImage: "url(/images/image_2.jpg)"}}></a>
-                                                <div className="text">
-                                                    <h3 className="heading-1"><a href="/#">Even the all-powerful Pointing has no
-                                                        control about the blind texts</a></h3>
-                                                    <div className="meta">
-                                                        <div><a href="/#"><span className="icon-calendar"></span> April 09, 2019</a>
-                                                        </div>
-                                                        <div><a href="/#"><span className="icon-person"></span> Admin</a></div>
-                                                        <div><a href="/#"><span className="icon-chat"></span> 19</a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="block-21 mb-4 d-flex">
-                                                <a href="/#" className="blog-img mr-4"
-                                                   style={{backgroundImage: "url(/images/image_3.jpg)"}}></a>
-                                                <div className="text">
-                                                    <h3 className="heading-1"><a href="/#">Even the all-powerful Pointing has no
-                                                        control about the blind texts</a></h3>
-                                                    <div className="meta">
-                                                        <div><a href="/#"><span className="icon-calendar"></span> April 09, 2019</a>
-                                                        </div>
-                                                        <div><a href="/#"><span className="icon-person"></span> Admin</a></div>
-                                                        <div><a href="/#"><span className="icon-chat"></span> 19</a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <BlogCategories/>
 
-                                        <div className="sidebar-box ftco-animate">
-                                            <h3 className="heading">Tag Cloud</h3>
-                                            <div className="tagcloud">
-                                                <a href="/#" className="tag-cloud-link">fruits</a>
-                                                <a href="/#" className="tag-cloud-link">tomatoe</a>
-                                                <a href="/#" className="tag-cloud-link">mango</a>
-                                                <a href="/#" className="tag-cloud-link">apple</a>
-                                                <a href="/#" className="tag-cloud-link">carrots</a>
-                                                <a href="/#" className="tag-cloud-link">orange</a>
-                                                <a href="/#" className="tag-cloud-link">pepper</a>
-                                                <a href="/#" className="tag-cloud-link">eggplant</a>
-                                            </div>
-                                        </div>
+                                        <RecentBlog pageContext={pageContext}/>
 
-                                        <div className="sidebar-box ftco-animate">
+                                        <TagCloud/>
+
+                                        {/*<div className="sidebar-box ftco-animate">
                                             <h3 className="heading">Paragraph</h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem
                                                 necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa
                                                 sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-                                        </div>
+                                        </div>*/}
                                     </div>
 
 

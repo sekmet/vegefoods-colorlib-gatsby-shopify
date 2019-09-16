@@ -6,6 +6,7 @@ layout: post
 path: "/my-second-post/"
 category: FrontEnd
 editorpick: no
+tags: ["Markdown", "Emoji", "Chess"]
 description: "Civil society; save lives pathway to a better life public-private partnerships solution, tackle, protect UNHCR social movement Jane Addams sustainable campaign respond equality."
 tagline: ""
 seo:
