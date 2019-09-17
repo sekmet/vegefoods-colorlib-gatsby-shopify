@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+import "scss/style.scss"
 
 // lazy loading
 import 'lazysizes'

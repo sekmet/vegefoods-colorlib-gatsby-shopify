@@ -11,3 +11,4 @@
   GATSBY_ALGOLIA_APP_ID = "You Algolia App ID"
   GATSBY_ALGOLIA_SEARCH_KEY = "You Algolia API Search Key"
   GATSBY_ALGOLIA_ADMIN_KEY = "You Algolia API Admin Key"
+  MAILCHIMP_LIST_ENDPOINT = "Your Mailchimp List Endpoint Url"

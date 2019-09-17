@@ -12,10 +12,8 @@ import {StaticQuery, graphql} from "gatsby"
 import Legacy from "../components/common/legacy"
 import Footer from "../components/footer"
 
-import TopBar from "../components/topbar";
-import NavBar from "../components/navbar";
-
-import "scss/style.scss"
+import TopBar from "../components/topbar"
+import NavBar from "../components/navbar"
 
 class Layout extends React.Component {
 
