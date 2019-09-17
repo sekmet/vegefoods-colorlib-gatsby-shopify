@@ -1,5 +1,5 @@
 {
-  "mailchimpListEndpoint": false,
+  "mailchimpListEndpoint": "https://open4g.us4.list-manage.com/subscribe/post?u=2b5f192f4de6d452a6d0c462a&amp;id=846d5086bb",
   "subscribeFormClassname": "subscribe-form",
   "subscribeInputClassname": "form-control",
   "subscribeInputPlaceholder": "Your email address",
