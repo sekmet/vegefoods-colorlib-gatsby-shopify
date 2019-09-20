@@ -82,7 +82,7 @@ class Legacy extends React.Component {
                     if ($('#ftco-loader').length > 0) {
                         $('#ftco-loader').removeClass('show');
                     }
-                }, 1);
+                }, 100);
             };
             loader();
 
@@ -97,7 +97,7 @@ class Legacy extends React.Component {
                     animateOut: 'fadeOut',
                     animateIn: 'fadeIn',
                     nav: false,
-                    autoplayHoverPause: false,
+                    autoplayHoverPause: true,
                     items: 1,
                     navText: ["<span class='ion-md-arrow-back'></span>", "<span class='ion-chevron-right'></span>"],
                     responsive: {

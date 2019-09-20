@@ -11,7 +11,7 @@ class About extends React.Component {
         return (
             <>
                 <SEO title="About Us"/>
-                <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url('/images/image_1.jpg')"}}>
+                <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), no-repeat center url('/images/bg_3.jpg')"}}>
                     <BlockWaypoint ref={el => this.el = this.el} innerchild={'.hero-bread .ftco-animate'}>
                     <div className="container">
                         <div className="row no-gutters slider-text align-items-center justify-content-center">

@@ -17,7 +17,7 @@ class IndexPage extends React.Component {
             <section id="home-section" className="hero">
                 <BlockWaypoint ref={el => this.el = this.el} innerchild={'.slider-item .ftco-animate'}>
                     <div className="home-slider owl-carousel">
-                        <div className="slider-item" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url(/images/bg_2.jpg)"}}>
+                        <div className="slider-item" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), no-repeat center url(/images/bg_2.jpg)"}}>
                             <div className="overlay"></div>
                             <div className="container">
                                 <div
@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="slider-item" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url(/images/bg_3.jpg)"}}>
+                        <div className="slider-item" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), no-repeat center url(/images/bg_3.jpg)"}}>
                             <div className="overlay"></div>
                             <div className="container">
                                 <div

@@ -52,7 +52,7 @@ class ProductsBytag extends React.Component {
             <SEO title={metatitletpl ? metaReplace(metatitletpl,findMeta,replaceMeta) : metatitletpl}
                  tagline={shoptagline}
                  description={metadescriptiontpl ? metaReplace(metadescriptiontpl,findMeta,replaceMeta) : metadescriptiontpl} />
-            <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url('/images/bg_2.jpg')"}}>
+            <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), no-repeat center url('/images/bg_2.jpg')"}}>
                 <BlockWaypoint ref={el => this.el = this.el} innerchild={'.hero-bread .ftco-animate'}>
                     <div className="container">
                         <div className="row no-gutters slider-text align-items-center justify-content-center">

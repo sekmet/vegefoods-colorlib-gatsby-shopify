@@ -57,7 +57,7 @@ class Articles extends React.Component {
             return (
                 <>
                     <SEO title={metatitle} description={metadescription}/>
-                    <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url('/images/image_3.jpg')"}}>
+                    <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), no-repeat center url('/images/bg_2.jpg')"}}>
                         <BlockWaypoint ref={el => this.el = this.el} innerchild={'.hero-bread .ftco-animate'}>
                             <div className="container">
                                 <div

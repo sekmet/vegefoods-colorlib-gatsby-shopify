@@ -78,7 +78,7 @@ class Contact extends React.Component {
         return (
             <>
                 <SEO title="Contact"/>
-                <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), url('/images/image_6.jpg')"}}>
+                <div className="hero-wrap hero-bread" style={{background: "linear-gradient(rgba(20,20,20, .5),rgba(20,20,20, .5)), no-repeat center url('/images/bg_1.jpg')"}}>
                     <BlockWaypoint ref={el => this.el = this.el} innerchild={'.hero-bread .ftco-animate'}>
                     <div className="container">
                         <div className="row no-gutters slider-text align-items-center justify-content-center">
@@ -129,7 +129,7 @@ class Contact extends React.Component {
                                         <br/>
                                         Talk to you soon,
                                         <br />
-                                        Open4G Labs
+                                        <em>Open4G Labs</em>
                                     </p>
                                     <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
